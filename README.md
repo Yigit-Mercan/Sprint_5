@@ -1,4 +1,4 @@
-http//:sprint-5-rho.vercel.app # React + TypeScript + Vite
+http://sprint-5-rho.vercel.app # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
