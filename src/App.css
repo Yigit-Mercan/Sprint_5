@@ -1,0 +1,382 @@
+/* ===== TEMEL VE SIFIRLAMA ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  line-height: 1.55;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Tüm Ekranı Kaplayan Kapsayıcı */
+.app, .site-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER (Ekranı Boydan Boya Kaplayan Bordo Başlık) ===== */
+.site-header, .site-baslik, header {
+  background-color: #8c1645 !important;
+  color: #ffffff !important;
+  padding: 24px 36px 12px !important;
+  width: 100% !important;
+}
+
+.site-header h1, .site-baslik h1, header h1 {
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.site-header p, .site-baslik p, header p {
+  font-size: 0.85rem !important;
+  color: #f7d6e2 !important;
+  margin-top: 4px !important;
+}
+
+/* ===== NAVIGATION (Bordo Bar İçindeki Sekmeler) ===== */
+.site-nav, .navigation, nav {
+  background-color: #8c1645 !important;
+  padding: 8px 36px 18px !important;
+  display: flex !important;
+  gap: 10px !important;
+  width: 100% !important;
+  border-bottom: 1px solid #700f35 !important;
+}
+
+.site-nav a, .navigation a, nav a, .nav-link {
+  text-decoration: none !important;
+  font-size: 0.82rem !important;
+  padding: 6px 16px !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.2s !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  background: transparent;
+}
+
+.site-nav a:hover, .navigation a:hover, nav a:hover, .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Orijinal Beğendiğin Beyaz Aktif Sekme */
+.site-nav a.active, .navigation a.active, nav a.active, .nav-link.active {
+  background-color: #ffffff !important;
+  color: #8c1645 !important;
+  font-weight: 700 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ===== ANA İÇERİK BÖLÜMÜ ===== */
+.main, .ana-icerik, main {
+  flex: 1;
+  padding: 26px 36px !important;
+  width: 100% !important;
+}
+
+.section-title, .bolum-baslik, .main h2, main h2 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #8c1645 !important;
+  margin-bottom: 16px !important;
+}
+
+/* ===== ETKİNLİK KARTLARI (Orijinal Çerçeveli Kart Yapısı) ===== */
+.event-list, .etkinlik-listesi {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.event-card, .kart, article {
+  background: #ffffff !important;
+  border: 1px solid #ebdbe2 !important;
+  border-top: 3px solid #8c1645 !important;
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+.card-title, .event-card h2, .event-card h3, .kart h2, .kart h3 {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #8c1645 !important;
+  margin-bottom: 3px !important;
+}
+
+.card-category, .kategori-etiket {
+  font-size: 0.82rem !important;
+  color: #8c1645 !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+}
+
+.event-card p, .kart p {
+  font-size: 0.85rem !important;
+  color: #333333 !important;
+  margin-bottom: 3px !important;
+}
+
+.card-desc, .kart-aciklama {
+  color: #555555 !important;
+  margin-top: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Bordo Renkli "Detayları gör" Linki */
+.card-link, .link-btn, .event-card a, .kart a, .kart button {
+  display: inline-block !important;
+  font-size: 0.85rem !important;
+  color: #8c1645 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  margin-top: 4px !important;
+  cursor: pointer !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.card-link:hover, .link-btn:hover, .event-card a:hover, .kart a:hover {
+  text-decoration: underline !important;
+}
+
+.empty-msg, .sonuc-mesaj {
+  text-align: center;
+  color: #777;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+/* ===== FİLTRE ALANI ===== */
+.filter-area, .filtre-alani {
+  margin-bottom: 18px;
+  background: #fdf9fb;
+  padding: 14px 18px;
+  border: 1px solid #ebdbe2;
+  border-radius: 6px;
+}
+
+.filter-group, .filtre-grup {
+  margin-bottom: 10px;
+}
+
+.filter-group label, .filtre-grup label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.filter-group input, .filter-group select,
+.filtre-grup input, .filtre-grup select {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.filter-group input:focus, .filter-group select:focus,
+.filtre-grup input:focus, .filtre-grup select:focus {
+  outline: none;
+  border-color: #8c1645;
+}
+
+.filter-count, .sonuc-sayisi {
+  font-size: 0.8rem;
+  color: #8c1645;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ===== DETAY SAYFASI ===== */
+.detail-page, .detay-kapsayici {
+  max-width: 800px;
+}
+
+.poster-box, .afis-kutu {
+  background-color: #290815;
+  color: #ffffff;
+  padding: 36px 20px;
+  text-align: center;
+  border-radius: 6px;
+  border: 2px solid #8c1645;
+}
+
+.poster-box h2, .afis-ic h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.poster-box p, .afis-alt {
+  font-size: 0.82rem;
+  color: #f7d6e2;
+}
+
+.poster-caption, .afis-aciklama-etiket {
+  display: block;
+  font-size: 0.72rem;
+  color: #888;
+  margin: 5px 0 16px;
+}
+
+.info-box, .kunye-kutu {
+  border: 1px solid #ebdbe2;
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  background-color: #fdf9fb;
+}
+
+.info-box h3, .kunye-kutu h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8c1645;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ebdbe2;
+}
+
+.info-box dt, .kunye-liste dt {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 8px;
+}
+
+.info-box dd, .kunye-liste dd {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.desc-box, .aciklama-alani {
+  margin-bottom: 18px;
+}
+
+.desc-box h3, .aciklama-alani h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8c1645;
+  margin-bottom: 6px;
+}
+
+.desc-box p, .aciklama-alani p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.detail-actions, .detay-aksiyonlar {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-back, .btn-secondary {
+  padding: 9px 18px;
+  font-size: 0.82rem;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-edit, .btn-primary {
+  padding: 9px 20px;
+  font-size: 0.82rem;
+  border: none;
+  background: #8c1645;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== FORM SAYFASI ===== */
+.form-page, .form-sayfa-kapsayici {
+  max-width: 600px;
+}
+
+.form-info, .form-bilgi-metni {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.event-form, .etkinlik-formu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group, .form-grup {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label, .form-grup label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.form-group input, .form-group select, .form-group textarea,
+.form-grup input, .form-grup select, .form-grup textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus,
+.form-grup input:focus, .form-grup select:focus, .form-grup textarea:focus {
+  outline: none;
+  border-color: #8c1645;
+}
+
+.btn-submit, .btn-kaydet {
+  padding: 10px;
+  background: #8c1645;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer, footer {
+  text-align: center;
+  padding: 20px 36px;
+  font-size: 0.75rem;
+  color: #888;
+  border-top: 1px solid #ebdbe2;
+  margin-top: auto;
+  width: 100% !important;
+}
